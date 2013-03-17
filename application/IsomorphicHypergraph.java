@@ -12,13 +12,14 @@ import java.util.ArrayList;
  */
 public class IsomorphicHypergraph {
     public static void main(String[] args) {
-        int dim = 3;
+        long t0 = System.currentTimeMillis();
+        int dim = 4;
         ArrayList<HyperGraph> col = new ArrayList<HyperGraph>();
 
 l0:     for (int row = 1, max = (1<<(1<<dim)); row < max; row++) {
-            /*if (row % 1000 == 0) {
+            if (row % 1000 == 0) {
                 System.out.println("processing " + row + " of " + max);
-            }*/
+            }
             HyperGraph u = new HyperGraph(dim, row);
 
             if (col.size() == 0) {
@@ -38,5 +39,6 @@ l0:     for (int row = 1, max = (1<<(1<<dim)); row < max; row++) {
         for (HyperGraph k : col) {
             System.out.println(new StringBuffer(String.format("%"+(1<<dim)+"s", Integer.toBinaryString(k.row)).replace(' ', '0')).reverse().toString());
         }
+        System.out.println((System.currentTimeMillis() - t0) / 1000 + " " + "seconds desu~");
     }
 }

@@ -81,6 +81,24 @@ l1:         for (int val=0; val<(1 << pc); val++) {
                 return false;
             }
         }
+        int[] deg1 = new int[vertex.size()], deg2 = new int[vertex.size()];
+        for (int i=0; i<vertex.size(); i++) {
+            for (ArrayList<Integer> e : edges) {
+                if (e.contains(vertex.get(i))) deg1[i]++;
+            }
+        }
+        for (int i=0; i<v.vertex.size(); i++) {
+            for (ArrayList<Integer> e : v.edges) {
+                if (e.contains(v.vertex.get(i))) deg2[i]++;
+            }
+        }
+        Arrays.sort(deg1);
+        Arrays.sort(deg2);
+        for (int i=0; i<deg1.length; i++) {
+            if (deg1[i] != deg2[i]) return false;
+        }
+
+
         int n = vertex.size(), e = edges.size();
         HyperGraph a = this, b = v;
 
