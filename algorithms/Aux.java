@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * Date: 3/15/13
  * Time: 5:57 PM
  */
+
 public class Aux {
     public static int numberOfOnes(int n) {
         int pc = 0, dim=30;

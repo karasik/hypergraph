@@ -10,6 +10,7 @@ import java.util.ArrayList;
  * Date: 3/15/13
  * Time: 1:50 PM
  */
+
 public class IsomorphicHypergraph {
     public static void main(String[] args) {
         long t0 = System.currentTimeMillis();

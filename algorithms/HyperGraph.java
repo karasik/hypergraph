@@ -10,6 +10,7 @@ import java.util.Comparator;
  * Date: 3/15/13
  * Time: 1:53 PM
  */
+
 public class HyperGraph {
     public int dim, row;
     public ArrayList<Integer> vertex;
